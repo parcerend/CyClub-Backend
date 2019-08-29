@@ -3,8 +3,8 @@
  */
 const mongoose = require('mongoose');
 const public = {
-    name: 'zeent123',
-    key: 'stich626'
+    name: 'public',
+    key: 'bazuco'
 };
 
 const url = `mongodb+srv://${public.name}:${public.key}@cluster0-hptao.mongodb.net/CyClub?retryWrites=true&w=majority`;
