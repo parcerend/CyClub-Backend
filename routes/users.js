@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const usersModel = require('../database/models/Users');
+const usersModel = require('../database/models/User');
 
 // To manage all the tokens for the users
 const jwt = require('jsonwebtoken');
