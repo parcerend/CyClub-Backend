@@ -27,13 +27,9 @@ router.post('/SignInWithCredentials', (req, res) => {
   
   usersModel.findByEmail(email, (err, user) => {
     if (err) throw err;
-
-    const id = user['_id'];
-    const { name } = user;
-
-    console.log(user);
-
     if (user) {
+      const id = user['_id'];
+      const { name } = user;
       res.status(200).send({
         id,
         msg: "This user's been registered yet",
