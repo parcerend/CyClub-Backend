@@ -1,12 +1,11 @@
 const connection = require('../../config/conn');
 
 const usersSchema = connection.Schema({
-    name: String,
-    label: String,
-    coordinates: Array
+    email: String,
+    name: String
 });
 
-const usersModel = connection.model('routes', routesSchema);
+const usersModel = connection.model('users', usersSchema);
 
 function handleError(err) { throw err; }
 
@@ -18,5 +17,7 @@ module.exports = {
             if(err) handleError(err);
             console.log("Data saved", data); 
         });
-    }
+    },
+
+    findByEmail: (email, callback) => usersModel.find({ email }, callback)
 }
