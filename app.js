@@ -36,4 +36,19 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+ app.get('/hola', function(req, res) {
+  res.send("HOLA"); 
+ });
+
+
+
+
+
+
+
+
+
+
+
+
 module.exports = app;
